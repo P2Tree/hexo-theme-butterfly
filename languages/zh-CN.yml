@@ -8,10 +8,10 @@ copy:
   noSupport: 浏览器不支持
 
 page:
-  articles: 全部文章
+  articles: 时间轴
   tag: 标签
-  category: 分类
-  archives: 归档
+  category: 类别
+  archives: 文踪
 
 card_post_count: 条评论
 
@@ -39,11 +39,11 @@ search:
   load_data: 数据加载中
   input_placeholder: 搜索文章
   algolia_search:
-    hits_empty: '未找到符合您查询的内容：${query}'
-    hits_stats: '找到 ${hits} 条结果，耗时 ${time} 毫秒'
+    hits_empty: "未找到符合您查询的内容：${query}"
+    hits_stats: "找到 ${hits} 条结果，耗时 ${time} 毫秒"
   local_search:
-    hits_empty: '未找到符合您查询的内容：${query}'
-    hits_stats: '共找到 ${hits} 篇文章'
+    hits_empty: "未找到符合您查询的内容：${query}"
+    hits_stats: "共找到 ${hits} 篇文章"
 
 pagination:
   prev: 上一篇
@@ -54,11 +54,11 @@ comment: 评论
 aside:
   articles: 文章
   tags: 标签
-  categories: 分类
+  categories: 类别
   card_announcement: 公告
-  card_categories: 分类
+  card_categories: 类别
   card_tags: 标签
-  card_archives: 归档
+  card_archives: 时间轴
   card_recent_post: 最新文章
   card_webinfo:
     headline: 网站信息

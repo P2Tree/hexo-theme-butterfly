@@ -7,29 +7,39 @@
 
 # --------------------------------------
 # Navigation Settings
+# 导航栏设置
 # --------------------------------------
 
+# 导航栏
 nav:
   # Navigation bar logo image
   logo:
   display_title: true
   # Whether to fix navigation bar
-  fixed: false
+  fixed: true
 
+# 目录
 menu:
-  # Home: / || fas fa-home
-  # List||fas fa-list:
-  #   Music: /music/ || fas fa-music
-  #   Movie: /movies/ || fas fa-video
+  首页: / || fas fa-home
+  文章||fas fa-pen-to-square:
+    文踪: /archives/ || fas fa-archive
+    标签: /tags/ || fas fa-tags
+    类别: /categories/ || fas fa-folder-open
+  收藏||fas fa-heartbeat:
+    游戏: https://quirky-olivine-7e6.notion.site/My-Games-Collection-a82b7f1e22b44e5fb7e207e521279a31 || fas fa-gamepad
+    书籍: https://quirky-olivine-7e6.notion.site/My-Book-Tracker-3ee78866f1274e869d48fe75bfec23e7 || fas fa-book-open
+  链接: /link/ || fas fa-link
+  关于: /about/ || fas fa-heart
 
 # --------------------------------------
 # Code Blocks Settings
+# 代码相关设置
 # --------------------------------------
 
 code_blocks:
   # Code block theme: darker / pale night / light / ocean / false
   theme: light
-  macStyle: false
+  macStyle: true
   # Code block height limit (unit: px)
   height_limit: false
   word_wrap: false
@@ -39,80 +49,97 @@ code_blocks:
   language: true
   # true: shrink the code blocks | false: expand the code blocks | none: expand code blocks and hide the button
   shrink: false
-  fullpage: false
+  fullpage: true
 
 # Social media links
+# 社交媒体图标和链接
 # Formal:
 #   icon: link || the description || color
 social:
-  # fab fa-github: https://github.com/xxxxx || Github || '#24292e'
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
+  iconfont icon-github: https://github.com/p2tree || Github
+  iconfont icon-mail: mailto:p2tree@163.com || Email
+  iconfont icon-zhihu: https://zhihu.com/people/p2tree || Zhihu
+  iconfont icon-wechat: /2024/08/05/微信公众号-P2Tree/ || Weixin
+  iconfont icon-feed: /atom.xml || Feed
 
 # --------------------------------------
 # Image Settings
+# 配图设置
 # --------------------------------------
 
-favicon: /img/favicon.png
+# 网站 fav icon
+favicon: https://img.p2tree.top/avatar.webp
 
+# 头像
 avatar:
-  img: /img/butterfly-icon.png
+  img: https://img.p2tree.top/avatar.webp
   effect: false
 
 # Disable all banner images
 disable_top_img: false
 
 # If the banner of page not setting, it will show the default_top_img
-default_top_img:
+# 页面的默认横幅图片
+default_top_img: https://img.p2tree.top/default.webp
 
 # The banner image of index page
-index_img:
+# 主页的横幅图片
+index_img: https://img.p2tree.top/default.webp
 
 # The banner image of archive page
-archive_img:
+# 归档页面的横幅图片
+archive_img: https://img.p2tree.top/default.webp
 
 # Note: tag page, not tags page
-tag_img:
+# 标签页面的横幅图片
+tag_img: https://img.p2tree.top/default.webp
 
 # The banner image of tag page, you can set the banner image for each tag
 # Format:
 #  - tag name: xxxxx
-tag_per_img:
+tag_per_img: https://img.p2tree.top/default.webp
 
 # Note: category page, not categories page
-category_img:
+# 分类页面的横幅图片
+category_img: https://img.p2tree.top/default.webp
 
 # The banner image of category page, you can set the banner image for each category
 # Format:
 #  - category name: xxxxx
-category_per_img:
+category_per_img: https://img.p2tree.top/default.webp
 
 # The background image of footer
-footer_img: false
+# 页脚图片
+# TODO:
+footer_img: https://img.p2tree.top/default.webp
 
 # Website Background
+# 网站背景图片
 # Can set it to color or image url
 background:
 
+# 文章封面
 cover:
   # Disable the cover or not
   index_enable: true
   aside_enable: true
   archives_enable: true
   # When cover is not set, the default cover is displayed
-  default_cover:
-    # - xxx.jpg
+  default_cover: https://img.p2tree.top/default.webp
 
 # Replace Broken Images
+# 当图片无法显示时，使用替换图片
 error_img:
-  flink: /img/friend_404.gif
-  post_page: /img/404.jpg
+  flink: https://img.p2tree.top/404.gif
+  post_page: https://img.p2tree.top/404.jpg
 
 # A simple 404 page
 error_404:
-  enable: false
-  subtitle: 'Page Not Found'
-  background: /img/error-page.png
+  enable: true
+  subtitle: "Oops! It seems the page has gone on an unexpected journey."
+  background: https://img.p2tree.top/default.webp
 
+# 主页中文章页卡片的 meta 信息显示
 post_meta:
   # Home Page
   page:
@@ -123,6 +150,7 @@ post_meta:
     categories: true
     tags: false
     label: true
+  # 文章页的 meta 信息显示
   post:
     # Choose: left / center
     position: left
@@ -136,23 +164,30 @@ post_meta:
 
 # --------------------------------------
 # Index page settings
+# 主页相关设置
 # --------------------------------------
 
 # The top_img settings of home page
 # default: top img - full screen, site info - middle
 # The position of site info, eg: 300px/300em/300rem/10%
+# TODO:
 index_site_info_top:
 # The height of top_img, eg: 300px/300em/300rem
 index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
-  enable: false
+  enable: true
   # Typewriter Effect
   effect: true
   # Customize typed.js
   # https://github.com/mattboldt/typed.js/#customization
   typed_option:
+    startDelay: 300
+    typeSpeed: 100
+    backSpeed: 20
+  loop: true
+  # TODO:
   # Source - Call the third-party service API (Chinese only)
   # It will show the source first, then show the content of sub
   # Choose: false/1/2/3
@@ -163,7 +198,10 @@ subtitle:
   source: false
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
+    - 每一次成功，都是通往下一个更困难问题的入场券
+    - Each success only buys an admission ticket to a more difficult problem
 
+# TODO:
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
 # 2: Cover on the right, info on the left
@@ -180,12 +218,13 @@ index_layout: 3
 # 3: auto_excerpt (default)
 # false: do not show the article introduction
 index_post_content:
-  method: 3
+  method: 2
   # If you set method to 2 or 3, the length need to config
   length: 500
 
 # --------------------------------------
 # Post Settings
+# 文章页设置
 # --------------------------------------
 
 toc:
@@ -232,6 +271,8 @@ related_post:
   # Choose: created / updated
   date_type: created
 
+# Post Pagination
+# 分页
 # Choose: 1 / 2 / false
 # 1: The 'next post' will link to old post
 # 2: The 'next post' will link to new post
@@ -239,16 +280,17 @@ related_post:
 post_pagination: 1
 
 # Displays outdated notice for a post
+# 文章过期提醒
 noticeOutdate:
   enable: false
   # Style: simple / flat
   style: flat
   # When will it be shown
-  limit_day: 365
+  limit_day: 1000
   # Position: top / bottom
   position: top
-  message_prev: It has been
-  message_next: days since the last update, the content of the article may be outdated.
+  message_prev: 距离上次更新已过去
+  message_next: 天，文章中的部分内容可能已经过时，请酌情参考～
 
 # --------------------------------------
 # Footer Settings
@@ -256,13 +298,14 @@ noticeOutdate:
 footer:
   owner:
     enable: true
-    since: 2019
+    since: 2024
   custom_text:
   # Copyright of theme and framework
-  copyright: true
+  copyright: false
 
 # --------------------------------------
 # Aside Settings
+# 侧边栏设置
 # --------------------------------------
 
 aside:
@@ -279,21 +322,21 @@ aside:
     category: true
   card_author:
     enable: true
-    description:
+    description: 基础软件研发工程师
     button:
-      enable: true
+      enable: false
       icon: fab fa-github
       text: Follow Me
       link: https://github.com/xxxxxx
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: 欢迎访问我的个人站点，这里会发布我的学习笔记和生活感悟
   card_recent_post:
     enable: true
     # If set 0 will show all
     limit: 5
     # Sort: date / updated
-    sort: date
+    sort: updated
     sort_order:
   card_newest_comments:
     enable: false
@@ -305,14 +348,14 @@ aside:
   card_categories:
     enable: true
     # If set 0 will show all
-    limit: 8
+    limit: 0
     # Choose: none / true / false
     expand: none
     sort_order:
   card_tags:
     enable: true
     # If set 0 will show all
-    limit: 40
+    limit: 0
     color: false
     # Order of tags, random/name/length
     orderby: random
@@ -328,14 +371,14 @@ aside:
     # Sort of order. 1, asc for ascending; -1, desc for descending
     order: -1
     # If set 0 will show all
-    limit: 8
+    limit: 0
     sort_order:
   card_post_series:
     enable: true
     # The title shows the series name
     series_title: false
     # Order by title or date
-    orderBy: 'date'
+    orderBy: "date"
     # Sort of order. 1, asc for ascending; -1, desc for descending
     order: -1
   card_webinfo:
@@ -343,13 +386,15 @@ aside:
     post_count: true
     last_push_date: true
     sort_order:
+    # TODO:
     # Time difference between publish date and now
     # Formal: Month/Day/Year Time or Year/Month/Day Time
     # Leave it empty if you don't enable this feature
-    runtime_date:
+    runtime_date: 07/16/2024
 
 # --------------------------------------
 # Bottom right button
+# 右下角按钮设置
 # --------------------------------------
 
 # The distance between the bottom right button and the bottom (default unit: px)
@@ -365,9 +410,9 @@ translate:
   # Time delay
   translateDelay: 0
   # The text of the button when the language is Simplified Chinese
-  msgToTraditionalChinese: '繁'
+  msgToTraditionalChinese: "繁"
   # The text of the button when the language is Traditional Chinese
-  msgToSimplifiedChinese: '簡'
+  msgToSimplifiedChinese: "簡"
 
 # Read Mode
 readmode: true
@@ -381,46 +426,49 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: false
+  autoChangeMode: 1
   # Set the light mode time. The value is between 0 and 24. If not set, the default value is 6 and 18
   start:
   end:
 
 # Show scroll percent in scroll-to-top button
-rightside_scroll_percent: false
+rightside_scroll_percent: true
 
 # Don't modify the following settings unless you know how they work
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
 # Don't repeat the same value
 rightside_item_order:
-  enable: false
+  enable: true
   # Default: readmode,translate,darkmode,hideAside
   hide:
   # Default: toc,chat,comment
-  show:
+  show: darkmode,readmode,hideAside
 
 # --------------------------------------
 # Global Settings
+# 全局设置
 # --------------------------------------
 
+# 文章锚点
 anchor:
   # When you scroll, the URL will update according to header id.
   auto_update: false
   # Click the headline to scroll and update the anchor
-  click_to_scroll: false
+  click_to_scroll: true
 
-photofigcaption: false
+photofigcaption: true
 
+# 复制的内容后边加上版权信息
 copy:
   enable: true
   # Add the copyright information after copied content
   copyright:
-    enable: false
-    limit_count: 150
+    enable: true
+    limit_count: 500
 
 # Need to install the hexo-wordcount plugin
 wordcount:
-  enable: false
+  enable: true
   # Display the word count of the article in post meta
   post_wordcount: true
   # Display the time to read the article in post meta
@@ -460,12 +508,13 @@ math:
 
 # --------------------------------------
 # Search
+# 搜索设置
 # --------------------------------------
 
 search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
-  use:
+  use: algolia_search
   placeholder:
 
   # Algolia Search
@@ -493,6 +542,7 @@ search:
 
 # --------------------------------------
 # Share System
+# 分享设置
 # --------------------------------------
 
 share:
@@ -503,6 +553,7 @@ share:
   # Share.js
   # https://github.com/overtrue/share.js
   sharejs:
+    # TODO:
     sites: facebook,twitter,wechat,weibo,qq
 
   # AddToAny
@@ -512,6 +563,7 @@ share:
 
 # --------------------------------------
 # Comments System
+# 评论设置
 # --------------------------------------
 
 comments:
@@ -519,7 +571,7 @@ comments:
   # Leave it empty if you don't need comments
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
   # Format of two comments system : Disqus,Waline
-  use:
+  use: Twikoo
   # Display the comment name next to the button
   text: true
   # Lazyload: The comment system will be load when comment element enters the browser's viewport.
@@ -607,10 +659,10 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId:
+  envId: https://twikoo.p2tree.top/
   region:
   # Use Twikoo visitor count as the page view count
-  visitor: false
+  visitor: true
   option:
 
 # Giscus
@@ -678,7 +730,7 @@ crisp:
 baidu_analytics:
 
 # https://analytics.google.com/analytics/web/
-google_analytics:
+google_analytics: G-2M9BYWL9WW
 
 # https://www.cloudflare.com/zh-tw/web-analytics/
 cloudflare_analytics:
@@ -686,6 +738,7 @@ cloudflare_analytics:
 # https://clarity.microsoft.com/
 microsoft_clarity:
 
+# TODO:
 # https://umami.is/
 umami_analytics:
   enable: false
@@ -766,9 +819,11 @@ tag_ui:
 # Rounded corners for UI elements
 rounded_corners_ui: true
 
+# TODO:
 # Stretches the lines so that each line has equal width
 text_align_justify: false
 
+# TODO:
 # Add a mask to the header and footer
 mask:
   header: true
@@ -776,13 +831,13 @@ mask:
 
 # Loading Animation
 preloader:
-  enable: false
+  enable: true
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
-  source: 1
+  source: 2
   # pace theme (see https://codebyzach.github.io/pace/)
-  pace_css_url:
+  pace_css_url: /css/pace-theme-minimal.css
 
 # Page Transition
 enter_transitions: true
@@ -800,19 +855,23 @@ beautify:
   # Specify the color of the title prefix icon, such as '#F47466'
   title_prefix_icon_color:
 
+# TODO:
 # Global font settings
 # Don't modify the following settings unless you know how they work
 font:
   global_font_size:
   code_font_size:
   font_family:
+  # -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
   code_font_family:
+  # consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
 
 # Font settings for the site title and site subtitle
 blog_title_font:
-  font_link:
-  font_family:
+  font_link: https://fonts.googleapis.com/css?family=Titillium+Web&display=swap
+  font-family: Titillium Web, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif
 
+# TODO:
 # The setting of divider icon
 hr_icon:
   enable: true
@@ -834,18 +893,18 @@ activate_power_mode:
 # canvas_ribbon
 # See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: false
+  enable: true
   # The size of ribbon
   size: 150
   # The opacity of ribbon (0 ~ 1)
   alpha: 0.6
   zIndex: -1
-  click_to_change: false
+  click_to_change: true
   mobile: false
 
 # Fluttering Ribbon
 canvas_fluttering_ribbon:
-  enable: false
+  enable: true
   mobile: false
 
 # canvas_nest
@@ -853,7 +912,7 @@ canvas_fluttering_ribbon:
 canvas_nest:
   enable: false
   # Color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
-  color: '0,0,255'
+  color: "0,0,255"
   # The opacity of line (0~1)
   opacity: 0.7
   # The z-index property of the background
@@ -892,7 +951,7 @@ clickShowText:
 # https://github.com/francoischalifour/medium-zoom
 # https://fancyapps.com/fancybox/
 # Leave it empty if you don't need lightbox
-lightbox:
+lightbox: fancybox
 
 # --------------------------------------
 # Tag Plugins settings
@@ -900,9 +959,9 @@ lightbox:
 
 # Series
 series:
-  enable: false
+  enable: true
   # Order by title or date
-  orderBy: 'title'
+  orderBy: "date"
   # Sort of order. 1, asc for ascending; -1, desc for descending
   order: 1
   number: true
@@ -958,20 +1017,20 @@ aplayerInject:
 # https://github.com/polonel/SnackBar
 # position: top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
-  enable: false
+  enable: true
   position: bottom-left
   # The background color of Toast Notification in light mode and dark mode
-  bg_light: '#49b1f5'
-  bg_dark: '#1f1f1f'
+  bg_light: "#49b1f5"
+  bg_dark: "#1f1f1f"
 
 # Instant.page
 # https://instant.page/
-instantpage: false
+instantpage: true
 
 # Pangu - Insert a space between Chinese character and English character
 # https://github.com/vinta/pangu.js
 pangu:
-  enable: false
+  enable: true
   # Specify the field to use pangu (site or post)
   field: site
 
@@ -981,7 +1040,7 @@ lazyload:
   enable: false
   # Specify the field to use lazyload (site or post)
   field: site
-  placeholder:
+  placeholder: https://img.p2tree.top/loading.jpg
   blur: false
 
 # PWA
@@ -1015,9 +1074,14 @@ css_prefix: true
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 inject:
   head:
-    # - <link rel="stylesheet" href="/xxx.css">
+    # baidu verification
+    - <meta name="baidu-site-verification" content="codeva-Watq1Co2vC" />
+    # ali font
+    - <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4649427_nfzovmtn6c.css">
   bottom:
-    # - <script src="xxxx"></script>
+    # 51la
+    - <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    - <script>LA.init({id:"3JR7r5l5JW5Miut3",ck:"3JR7r5l5JW5Miut3",autoTrack:true})</script>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
@@ -1027,14 +1091,14 @@ CDN:
   # Note: Dev version can only use 'local' for internal scripts
   # Note: When setting third-party scripts to 'local', you need to install hexo-butterfly-extjs
   internal_provider: local
-  third_party_provider: jsdelivr
+  third_party_provider: custom
 
   # Add version number to url, true or false
-  version: false
+  version: true
 
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format:
+  custom_format: https://npm.elemecdn.com/${name}@latest/${file}
 
   option:
     # abcjs_basic_js:
@@ -1049,7 +1113,7 @@ CDN:
     # busuanzi:
     # canvas_fluttering_ribbon:
     # canvas_nest:
-    # canvas_ribbon:
+    canvas_ribbon: https://cdn.bootcdn.net/ajax/libs/butterfly-extsrc/1.1.4/canvas-ribbon.min.js
     # click_heart:
     # clickShowText:
     # disqusjs:
@@ -1092,3 +1156,78 @@ CDN:
     # valine:
     # waline_css:
     # waline_js:
+
+# -------------------------
+# Custom Settings
+# -------------------------
+
+# hexo-butterfly-swiper
+# see https://akilar.top/posts/8e1264d1/
+swiper:
+  enable: true # 开关
+  priority: 5 #过滤器优先权, default: 10
+  enable_page: all # 应用页面, <path> | all, default: all
+  exclude: #屏蔽页面
+    - /about/
+    - /tags/
+    - /categories/
+    - /draft/
+  timemode: date #date/updated, default: date
+  layout: # 挂载容器类型
+    type: id
+    name: recent-posts
+    index: 0
+  error_img: https://img.p2tree.top/default.webp #封面图片加载失败的默认封面
+  insertposition: afterbegin
+  default_descr: 太懒了，没有写描述信息，点进去看吧
+  swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css #swipercss 依赖
+  swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js #swiper js 依赖
+  custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css # 适配主题样式补丁
+  custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js # swiper 初始化方法
+
+# footer_beautify
+# 页脚计时器：[Native JS Timer](https://akilar.top/posts/b941af/)
+# 页脚徽标：[Add Github Badge](https://akilar.top/posts/e87ad7f8/)
+footer_beautify:
+  enable:
+    timer: false # 计时器开关
+    bdage: true # 徽标开关
+  priority: 5 #过滤器优先权
+  enable_page: all # 应用页面
+  exclude:
+    # - /posts/
+    # - /about/
+  layout: # 挂载容器类型
+    type: id
+    name: footer-wrap
+    index: 0
+  # 计时器部分配置项
+  runtime_js: # /js/footer_beautify.js
+  runtime_css: # /css/footer_beautify.css
+  # 徽标部分配置项
+  swiperpara: 0 #若非0，则开启轮播功能，每行徽标个数
+  bdageitem:
+    - link: https://hexo.io/ #徽标指向网站链接
+      shields: https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo #徽标API
+      message: 博客框架为Hexo_v7.0.0 #徽标提示语
+    - link: https://butterfly.js.org/
+      shields: https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender
+      message: 主题版本Butterfly_v4.13.0
+    - link: https://vercel.com/
+      shields: https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&logo=Vercel
+      message: 本站部署托管于Vercel
+    - link: https://cloudflare.com/
+      shields: https://img.shields.io/badge/Image-CloudFlare-orange?style=flat&logo=Cloudflare
+      message: 本站图床使用CloudFlare提供服务
+    - link: https://v6.51.la/land/3JR7r5l5JW5Miut3
+      shields: https://img.shields.io/badge/Tracker-51LA-blue
+      message: 本站使用 51la 提供网站访问统计服务
+    - link: https://github.com/
+      shields: https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub
+      message: 本站源码由Github托管
+    - link: http://creativecommons.org/licenses/by-nc-sa/4.0/
+      shields: https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris
+      message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
+  swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css
+  swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js
+  swiperbdage_init_js: https://npm.elemecdn.com/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js
