@@ -110,7 +110,6 @@ category_per_img: https://img.p2tree.top/default.webp
 
 # The background image of footer
 # 页脚图片
-# TODO:
 footer_img: https://img.p2tree.top/default.webp
 
 # Website Background
@@ -170,10 +169,9 @@ post_meta:
 # The top_img settings of home page
 # default: top img - full screen, site info - middle
 # The position of site info, eg: 300px/300em/300rem/10%
-# TODO:
 index_site_info_top:
 # The height of top_img, eg: 300px/300em/300rem
-index_top_img_height:
+index_top_img_height: 400px
 
 # The subtitle on homepage
 subtitle:
@@ -183,11 +181,10 @@ subtitle:
   # Customize typed.js
   # https://github.com/mattboldt/typed.js/#customization
   typed_option:
-    startDelay: 300
-    typeSpeed: 100
-    backSpeed: 20
+    startDelay: 400
+    typeSpeed: 150
+    backSpeed: 30
   loop: true
-  # TODO:
   # Source - Call the third-party service API (Chinese only)
   # It will show the source first, then show the content of sub
   # Choose: false/1/2/3
@@ -195,13 +192,11 @@ subtitle:
   # 1 - hitokoto.cn
   # 2 - yijuzhan.com
   # 3 - jinrishici.com
-  source: false
+  source: 3
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
     - 每一次成功，都是通往下一个更困难问题的入场券
-    - Each success only buys an admission ticket to a more difficult problem
 
-# TODO:
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
 # 2: Cover on the right, info on the left
@@ -386,7 +381,6 @@ aside:
     post_count: true
     last_push_date: true
     sort_order:
-    # TODO:
     # Time difference between publish date and now
     # Formal: Month/Day/Year Time or Year/Month/Day Time
     # Leave it empty if you don't enable this feature
