@@ -1076,6 +1076,7 @@ inject:
     # 51la
     - <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     - <script>LA.init({id:"3JR7r5l5JW5Miut3",ck:"3JR7r5l5JW5Miut3",autoTrack:true})</script>
+    - <script src="/js/mourning.js"></script>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
